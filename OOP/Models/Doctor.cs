@@ -11,7 +11,6 @@
             TakeDinner();
         }
 
-
         private static void LunchTime()
         {
             Console.WriteLine("Doctor takes lunch");

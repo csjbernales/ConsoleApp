@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace OOP.Models.Tests
+using OOP.Models;
+
+namespace OOPTests.Models
 {
     [TestClass()]
     public class DoctorTests
@@ -18,15 +20,14 @@ namespace OOP.Models.Tests
         {
             Init();
             doctor.Id = 1;
-            doctor.Name= "Test";
-            doctor.Description= "Test";
-            doctor.Type= "Test";
-            
+            doctor.Name = "Test";
+            doctor.Description = "Test";
+            doctor.Type = "Test";
+
             Assert.AreEqual(1, doctor.Id);
             Assert.AreEqual("Test", doctor.Name);
             Assert.AreEqual("Test", doctor.Description);
             Assert.AreEqual("Test", doctor.Type);
-
 
             doctor.TakeDinner();
             doctor.GoToWork();

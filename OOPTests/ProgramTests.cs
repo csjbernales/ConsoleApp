@@ -1,16 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using OOP;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using static OOP.Program;
 
-namespace OOP.Tests
+namespace OOPTests
 {
     [TestClass()]
     public class ProgramTests
@@ -18,7 +10,7 @@ namespace OOP.Tests
         [TestMethod()]
         public void MainTest()
         {
-            Program.Main();
+            Main();
             _ = new StartUp();
             StartUp.Init();
         }

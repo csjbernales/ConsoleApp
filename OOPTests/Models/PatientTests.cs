@@ -2,14 +2,7 @@
 
 using OOP.Models;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOP.Models.Tests
+namespace OOPTests.Models
 {
     [TestClass()]
     public class PatientTests
@@ -30,7 +23,7 @@ namespace OOP.Models.Tests
             patient.Name = "Test";
             patient.Description = "Test";
             patient.Type = "Test";
-            patient.Doctor= new Doctor() { Name = "", Type = "", Description = "", Id = 0 };
+            patient.Doctor = new Doctor() { Name = "", Type = "", Description = "", Id = 0 };
 
             Assert.AreEqual(1, patient.Id);
             Assert.AreEqual("Test", patient.Name);
@@ -40,13 +33,11 @@ namespace OOP.Models.Tests
             patient.GoToWork();
         }
 
-
         [TestMethod()]
         public void TakeDinnerTest()
         {
             patient.TakeDinner();
         }
-
 
         [TestMethod()]
         public void TakeDinnerWithParamTest()

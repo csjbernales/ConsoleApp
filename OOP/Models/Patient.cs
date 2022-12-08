@@ -13,7 +13,6 @@
             TakeDinner("Pasta");
         }
 
-
         private static void LunchTime()
         {
             Console.WriteLine("Patient takes lunch");
@@ -28,7 +27,5 @@
         {
             Console.WriteLine($"Patient takes dinner with {food}");
         }
-
-
     }
 }
