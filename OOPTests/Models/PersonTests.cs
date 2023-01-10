@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using FakeItEasy;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using OOP.Models;
 
@@ -31,6 +33,21 @@ namespace OOPTests.Models
         {
             Init();
             patient.GoToWork();
+        }
+
+        [TestMethod()]
+        public void GoToWorkTest2()
+        {
+            IPerson person = A.Fake<IPerson>();
+            person.Name = "Name";
+            person.Id = 0;
+            person.Description = "Desc";
+
+            A.CallTo(() => person.GoToWork()).Returns(false);
+
+            var result = person.GoToWork();
+
+            A.CallTo(person.GoToWork()).MustHaveHappened();
         }
     }
 }

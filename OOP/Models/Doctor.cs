@@ -4,16 +4,22 @@
     {
         public string Type { get; set; } = String.Empty;
 
-        public override void GoToWork()
+        public override bool GoToWork()
         {
             Console.WriteLine("Doctor to go to work");
             LunchTime();
             TakeDinner();
+            return true;
         }
 
         private static void LunchTime()
         {
             Console.WriteLine("Doctor takes lunch");
+        }
+
+        public void Tasks()
+        {
+
         }
     }
 }

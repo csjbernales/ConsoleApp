@@ -6,7 +6,7 @@
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
 
-        public abstract void GoToWork();
+        public abstract bool GoToWork();
 
         public virtual void TakeDinner()
         {

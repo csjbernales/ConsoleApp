@@ -5,12 +5,13 @@
         public string Type { get; set; } = string.Empty;
         public Doctor Doctor { get; set; } = new Doctor();
 
-        public override void GoToWork()
+        public override bool GoToWork()
         {
             Console.WriteLine("Patient to go to work");
             LunchTime();
             TakeDinner();
             TakeDinner("Pasta");
+            return true;
         }
 
         private static void LunchTime()
